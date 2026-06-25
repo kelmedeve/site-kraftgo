@@ -18,7 +18,7 @@ function figmaAssetResolver() {
 export default defineConfig({
   base: '/site-kraftgo/',
   build: {
-    outDir: 'docs'   // saída do build vai direto para docs
+    outDir: 'docs/dist'   // saída do build vai para docs/dist
   },
   plugins: [
     figmaAssetResolver(),
