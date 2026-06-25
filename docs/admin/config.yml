@@ -5,7 +5,6 @@
   base_url: https://seu-oauth-provider.netlify.app
   auth_endpoint: auth
 
-
 media_folder: "docs/assets"
 public_folder: "/assets"
 
