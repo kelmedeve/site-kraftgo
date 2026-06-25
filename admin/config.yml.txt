@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: kelmedeve/site-kraftgo
+  branch: main
+
+media_folder: "docs/assets/images"
+public_folder: "/site-kraftgo/assets/images"
+
+collections:
+  - name: "conteudo"
+    label: "Conteúdo do Site"
+    files:
+      - file: "docs/content/home.md"
+        label: "Página Inicial"
+        name: "home"
+        fields:
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Banner", name: "banner", widget: "image"}
+          - {label: "Descrição", name: "description", widget: "text"}
