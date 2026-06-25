@@ -1,4 +1,4 @@
-backend:
+﻿backend:
   name: github
   repo: kelmedeve/site-kraftgo
   branch: main
