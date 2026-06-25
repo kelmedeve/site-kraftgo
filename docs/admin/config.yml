@@ -1,20 +1,12 @@
 ﻿backend:
-  name: git-gateway
+  name: github
+  repo: kelmedeve/site-kraftgo
   branch: main
 
 media_folder: "docs/assets"
 public_folder: "/assets"
 
 collections:
-  - name: "pages"
-    label: "Páginas"
-    folder: "docs/admin/content"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Conteúdo", name: "body", widget: "markdown" }
-
   - name: "home"
     label: "Página Inicial"
     files:
