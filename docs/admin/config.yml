@@ -8,9 +8,39 @@ public_folder: "/assets"
 collections:
   - name: "pages"
     label: "Páginas"
-    folder: "docs/admin"
+    folder: "docs/admin/content"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
+
+  - name: "home"
+    label: "Página Inicial"
+    files:
+      - file: "docs/admin/home.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
+
+  - name: "about"
+    label: "Página Sobre"
+    files:
+      - file: "docs/admin/about.md"
+        label: "Sobre"
+        name: "about"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
+
+  - name: "contact"
+    label: "Página Contato"
+    files:
+      - file: "docs/admin/contact.md"
+        label: "Contato"
+        name: "contact"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
