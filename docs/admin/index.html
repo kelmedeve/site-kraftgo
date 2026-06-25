@@ -1,25 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Painel de Administração</title>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Painel Admin - KraftGo</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🌐 Painel KraftGo</h1>
+      <p>Gerencie suas páginas aqui</p>
+    </header>
 
-  <!-- Configuração do CMS -->
-  <script>
-    window.CMS_CONFIG = {
-      backend: {
-        name: "github",
-        repo: "kelmedeve/site-kraftgo",
-        branch: "main",
-        auth_scope: "repo"
-      }
-    };
-  </script>
+    <main id="cms"></main>
 
-  <!-- Carrega o Netlify CMS -->
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-</head>
-<body>
-  <!-- O CMS será injetado automaticamente aqui -->
-</body>
+    <!-- Carrega o CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  </body>
 </html>
