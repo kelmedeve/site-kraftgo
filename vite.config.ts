@@ -3,7 +3,6 @@ import path from 'path'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
-
 function figmaAssetResolver() {
   return {
     name: 'figma-asset-resolver',
@@ -18,7 +17,10 @@ function figmaAssetResolver() {
 
 export default defineConfig({
   base: '/site-kraftgo/',
- plugins: [
+  build: {
+    outDir: 'docs'   // saída do build vai direto para docs
+  },
+  plugins: [
     figmaAssetResolver(),
     react(),
     tailwindcss(),
