@@ -2,7 +2,9 @@
   name: github
   repo: kelmedeve/site-kraftgo
   branch: main
-  base_url: https://SEU-OAUTH-PROVIDER.com
+  base_url: https://seu-oauth-provider.netlify.app
+  auth_endpoint: auth
+
 
 media_folder: "docs/assets"
 public_folder: "/assets"
