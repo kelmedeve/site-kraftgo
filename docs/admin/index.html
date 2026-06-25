@@ -3,7 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Painel de Administração</title>
-  <!-- Carrega o Netlify CMS via CDN -->
+
+  <!-- Configuração do CMS -->
+  <script>
+    window.CMS_CONFIG = {
+      backend: {
+        name: "github",
+        repo: "kelmedeve/site-kraftgo",
+        branch: "main",
+        auth_scope: "repo"
+      }
+    };
+  </script>
+
+  <!-- Carrega o Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </head>
 <body>
