@@ -1,1 +1,20 @@
+backend:
+  name: github
+  repo: kelmedeve/site-kraftgo
+  branch: main
+  base_url: https://decap-cms-oauth-provider-d4wt.vercel.app
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Corpo", name: "body", widget: "markdown" }
 
