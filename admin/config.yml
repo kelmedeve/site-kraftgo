@@ -2,7 +2,8 @@ backend:
   name: github
   repo: kelmedeve/site-kraftgo
   branch: main
-  base_url: https://decap-cms-oauth-provider-ocerto-s011qgi60-kelmedeve.vercel.app
+  base_url: https://site-kraftgo.vercel.app
+
 
 media_folder: "static/img"
 public_folder: "/img"
