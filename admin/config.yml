@@ -2,7 +2,7 @@ backend:
   name: github
   repo: kelmedeve/site-kraftgo   # seu repositório
   branch: main                   # branch principal
-  base_url: https://site-kraftgo.vercel.app
+  base_url: https://decap-cms-oauth-provider-d4wt.vercel.app
 
 media_folder: "static/images/uploads"   # onde os arquivos vão ser salvos no repo
 public_folder: "/images/uploads"        # caminho público para acessar as imagens
