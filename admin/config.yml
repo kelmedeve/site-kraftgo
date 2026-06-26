@@ -4,8 +4,8 @@ backend:
   branch: main
   base_url: https://decap-cms-oauth-provider-d4wt.vercel.app
 
-media_folder: "static/images/uploads"   # onde os arquivos vão ser salvos no repo
-public_folder: "/images/uploads"        # caminho público para acessar as imagens
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "posts"
