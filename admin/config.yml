@@ -2,20 +2,18 @@ backend:
   name: github
   repo: kelmedeve/site-kraftgo
   branch: main
-  base_url: https://decap-cms-oauth-provider.vercel.app
-  auth_endpoint: auth
+  base_url: https://decap-cms-oauth-provider-ocerto-s011qgi60-kelmedeve.vercel.app
 
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "static/img"
+public_folder: "/img"
 
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "posts"
+    folder: "content/posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "body", label: "Body", widget: "markdown" }
-
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Corpo", name: "body", widget: "markdown" }
