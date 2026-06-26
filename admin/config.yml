@@ -1,12 +1,11 @@
 backend:
   name: github
-  repo: kelmedeve/site-kraftgo
-  branch: main
+  repo: kelmedeve/site-kraftgo   # seu repositório
+  branch: main                   # branch principal
   base_url: https://site-kraftgo.vercel.app
 
-
-media_folder: "static/img"
-public_folder: "/img"
+media_folder: "static/images/uploads"   # onde os arquivos vão ser salvos no repo
+public_folder: "/images/uploads"        # caminho público para acessar as imagens
 
 collections:
   - name: "posts"
