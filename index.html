@@ -1,22 +1,37 @@
+const express = require("express");
+const bodyParser = require("body-parser");
+const fetch = require("node-fetch");
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Portfolio website</title>
-      <meta name="description" content="Create a stunning online portfolio to showcase your design work, attract potential clients, and enhance your professional presence." />
-      <meta name="robots" content="noindex, nofollow" />
-      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
-      
-    </head>
+const app = express();
+app.use(bodyParser.json());
 
-    <body>
-      
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-      
-    </body>
-  </html>
-  
+const CLIENT_ID = process.env.OAUTH_CLIENT_ID;
+const CLIENT_SECRET = process.env.OAUTH_CLIENT_SECRET;
+const GITHUB_URL = process.env.OAUTH_GITHUB_URL || "https://github.com";
+
+// Endpoint de autenticação
+app.get("/auth", (req, res) => {
+  const redirect = `${GITHUB_URL}/login/oauth/authorize?client_id=${CLIENT_ID}&scope=repo,user`;
+  res.redirect(redirect);
+});
+
+// Callback do GitHub
+app.get("/callback", async (req, res) => {
+  const code = req.query.code;
+
+  const response = await fetch(`${GITHUB_URL}/login/oauth/access_token`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "Accept": "application/json" },
+    body: JSON.stringify({
+      client_id: CLIENT_ID,
+      client_secret: CLIENT_SECRET,
+      code
+    })
+  });
+
+  const data = await response.json();
+  res.json(data);
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`OAuth Provider rodando na porta ${port}`));

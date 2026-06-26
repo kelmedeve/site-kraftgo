@@ -1,12 +1,11 @@
 ﻿backend:
   name: github
-  repo: kelmedeve/site-kraftgo
+  repo: kelmedeve/site-kraftgo   # repositório onde ficam os conteúdos
   branch: main
-  base_url: https://seu-oauth-provider.netlify.app
-  auth_endpoint: auth
+  base_url: https://decap-cms-oauth-provider-fjwh.vercel.app
 
-media_folder: "docs/assets"
-public_folder: "/assets"
+media_folder: "static/images/uploads"   # pasta onde os arquivos são salvos
+public_folder: "/images/uploads"        # caminho público para acessar os arquivos
 
 collections:
   - name: "home"
